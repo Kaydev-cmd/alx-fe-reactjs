@@ -16,7 +16,12 @@ function App() {
       {/* <Header />
       <MainContent />
       <Footer /> */}
-      <UserProfile name="Bill" age={25} bio="Loves hiking and photography" />
+      <UserProfile
+        image="src/assets/image_1.png"
+        name="Bill"
+        age={25}
+        bio="Loves hiking and photography"
+      />
     </>
   );
 }
