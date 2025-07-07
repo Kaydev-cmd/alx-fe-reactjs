@@ -17,8 +17,8 @@ function App() {
       <MainContent />
       <Footer /> */}
       <UserProfile
-        image="src/assets/image_1.png"
-        name="Bill"
+        // image="src/assets/image_1.png"
+        name="Alice"
         age={25}
         bio="Loves hiking and photography"
       />
