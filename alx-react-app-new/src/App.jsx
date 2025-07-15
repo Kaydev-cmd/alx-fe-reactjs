@@ -1,6 +1,3 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import WelcomeMessage from "./components/WelcomeMessage";
 import Header from "./components/Header";
@@ -9,19 +6,17 @@ import Footer from "./components/Footer";
 import UserProfile from "./components/UserProfile";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      {/* <Header />
+      <Header />
       <MainContent />
-      <Footer /> */}
       <UserProfile
-        // image="src/assets/image_1.png"
+        image="src/assets/image_1.png"
         name="Alice"
         age={25}
         bio="Loves hiking and photography"
       />
+      <Footer />
     </>
   );
 }
