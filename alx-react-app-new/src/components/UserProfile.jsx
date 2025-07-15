@@ -17,7 +17,9 @@ const UserProfile = (props) => {
     >
       <img src={props.image} alt="User" />
       <h2 style={{ color: "blue" }}>{props.name}</h2>
-      <p style={{ fontWeight: "bold" }}>Age: {props.age}</p>
+      <p>
+        Age: <span style={{ fontWeight: "bold" }}>{props.age}</span>{" "}
+      </p>
       <p>Bio: {props.bio}</p>
     </div>
   );
