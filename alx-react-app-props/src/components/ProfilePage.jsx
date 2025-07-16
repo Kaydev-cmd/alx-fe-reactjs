@@ -1,8 +1,8 @@
 import React from "react";
 import UserInfo from "./UserInfo";
 
-const ProfilePage = ({ userData }) => {
-  return <UserInfo userData={userData} />;
+const ProfilePage = () => {
+  return <UserInfo />;
 };
 
 export default ProfilePage;
