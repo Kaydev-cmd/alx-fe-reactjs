@@ -16,7 +16,37 @@ const Contact = () => {
     alert("Form submitted!");
   };
 
-  return <div>Contact</div>;
+  return (
+    <div style={{ padding: "20px" }}>
+      <h1>Contact Us</h1>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="name"
+          placeholder="Your name"
+          value={formData.name}
+          onChange={handleChange}
+          style={{ display: "block", margin: "10px 0" }}
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Your email"
+          value={formData.email}
+          onChange={handleChange}
+          style={{ display: "block", margin: "10px 0" }}
+        />
+        <textarea
+          name="message"
+          placeholder="Your message"
+          value={formData.message}
+          onChange={handleChange}
+          style={{ display: "block", margin: "10px 0" }}
+        />
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  );
 };
 
 export default Contact;
