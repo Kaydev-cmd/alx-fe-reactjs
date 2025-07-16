@@ -1,8 +1,8 @@
 import React from "react";
 import UserDetails from "./UserDetails";
 
-const UserInfo = ({ userData }) => {
-  return <UserDetails userData={userData} />;
+const UserInfo = () => {
+  return <UserDetails />;
 };
 
 export default UserInfo;
