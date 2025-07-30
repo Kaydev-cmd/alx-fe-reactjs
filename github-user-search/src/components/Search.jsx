@@ -30,7 +30,7 @@ const Search = () => {
       //   console.log("Fetched Data:", data);
       setUserData(data);
     } catch (err) {
-      setError("User not found or failed to fetch.");
+      setError("Looks like we cant find the user");
     } finally {
       setLoading(false);
     }
