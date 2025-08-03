@@ -31,7 +31,6 @@ const Search = () => {
     setUserData([]);
 
     try {
-      let data;
 
       if (formData.location || formData.repoCount) {
         const { users, hasMore } = await searchUsers({ ...formData, page: 1 });
@@ -41,9 +40,6 @@ const Search = () => {
         const data = await fetchUserData(formData.username.trim());
         setUserData([data]);
       }
-      // const data = await fetchUserData(formData.username.trim());
-      //   console.log("Fetched Data:", data);
-      // setUserData(data);
     } catch (err) {
       setError("Looks like we cant find the user", err);
     } finally {
@@ -77,7 +73,7 @@ const Search = () => {
           type="text"
           name="username"
           placeholder="Enter GitHub username..."
-          className="p-2 border border-blue-500 rounded-md w-[600px] placeholder-white text-white"
+          className="p-2 border border-blue-500 rounded-md w-full placeholder-white text-white"
           onChange={handleChange}
           value={formData.username}
         />
@@ -85,7 +81,7 @@ const Search = () => {
           type="text"
           name="location"
           placeholder="Location"
-          className="p-2 border border-blue-500 rounded-md w-[600px] placeholder-white text-white"
+          className="p-2 border border-blue-500 rounded-md w-full  placeholder-white text-white"
           onChange={handleChange}
           value={formData.location}
         />
@@ -93,7 +89,7 @@ const Search = () => {
           type="text"
           name="repoCount"
           placeholder="Enter Repo Count"
-          className="p-2 border border-blue-500 rounded-md w-[600px] placeholder-white text-white"
+          className="p-2 border border-blue-500 rounded-md w-full placeholder-white text-white"
           onChange={handleChange}
           value={formData.repoCount}
         />
@@ -104,30 +100,44 @@ const Search = () => {
 
       {userData.length > 0 && (
         <div>
-          {userData.map((user) => (
-            <div
-              key={user.id}
-              className="flex flex-col items-center gap-4 text-white p-8"
-            >
-              <img src={user.avatar_url} alt={user.login} />
-              <p>
-                <strong>Username:</strong> {user.login}
-              </p>
-              <p>
-                <a
-                  href={user.html_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 hover:underline"
-                >
-                  View Profile
-                </a>
-              </p>
-            </div>
-          ))}
+          <div className="grid grid-cols-3">
+            {userData.map((user) => (
+              <div
+                key={user.id}
+                className="flex flex-col items-center gap-4 text-white p-8"
+              >
+                <img src={user.avatar_url} alt={user.login} />
+                <p>
+                  <strong>Username:</strong> {user.login}
+                </p>
+                {/* <p>
+                <strong>Number of repos:</strong> {user.public_repos}
+                </p> */}
+                <p>
+                  <a
+                    href={user.html_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-500 hover:underline"
+                  >
+                    View Profile
+                  </a>
+                </p>
+              </div>
+            ))}
+          </div>
 
-          {hasMore && !loading && <button onClick={loadMore}>Load More</button>}
-          {loading && <p>Loading...</p>}
+          {loading && <p className="text-blue-700 text-center">Loading...</p>}
+          <div className="flex justify-center mt-2 p-8">
+            {hasMore && !loading && (
+              <button
+                onClick={loadMore}
+                className="bg-blue-700 text-white p-2 rounded-lg cursor-pointer"
+              >
+                Load More
+              </button>
+            )}
+          </div>
         </div>
       )}
     </div>
