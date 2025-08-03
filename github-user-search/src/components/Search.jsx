@@ -31,7 +31,6 @@ const Search = () => {
     setUserData([]);
 
     try {
-
       if (formData.location || formData.repoCount) {
         const { users, hasMore } = await searchUsers({ ...formData, page: 1 });
         setUserData(users);
@@ -68,7 +67,7 @@ const Search = () => {
 
   return (
     <div>
-      <form className="flex flex-col gap-6 mb-8" onSubmit={handleSubmit}>
+      <form className="flex flex-col p-4 gap-6 mb-8" onSubmit={handleSubmit}>
         <input
           type="text"
           name="username"
@@ -100,7 +99,7 @@ const Search = () => {
 
       {userData.length > 0 && (
         <div>
-          <div className="grid grid-cols-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
             {userData.map((user) => (
               <div
                 key={user.id}
