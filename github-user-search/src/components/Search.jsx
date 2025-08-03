@@ -45,7 +45,7 @@ const Search = () => {
       //   console.log("Fetched Data:", data);
       // setUserData(data);
     } catch (err) {
-      setError("Looks like we cant find the user");
+      setError("Looks like we cant find the user", err);
     } finally {
       setLoading(false);
     }
@@ -64,7 +64,7 @@ const Search = () => {
       setPage(nextPage);
       setHasMore(hasMore);
     } catch (err) {
-      setError("Something went wrong while loading more users.");
+      setError("Something went wrong while loading more users.", err);
     } finally {
       setLoading(false);
     }
@@ -72,12 +72,12 @@ const Search = () => {
 
   return (
     <div>
-      <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
+      <form className="flex flex-col gap-6 mb-8" onSubmit={handleSubmit}>
         <input
           type="text"
           name="username"
           placeholder="Enter GitHub username..."
-          className="p-2 border border-blue-500 rounded-md w-[400px] placeholder-white text-white"
+          className="p-2 border border-blue-500 rounded-md w-[600px] placeholder-white text-white"
           onChange={handleChange}
           value={formData.username}
         />
@@ -85,7 +85,7 @@ const Search = () => {
           type="text"
           name="location"
           placeholder="Location"
-          className="p-2 border border-blue-500 rounded-md w-[400px] placeholder-white text-white"
+          className="p-2 border border-blue-500 rounded-md w-[600px] placeholder-white text-white"
           onChange={handleChange}
           value={formData.location}
         />
@@ -93,7 +93,7 @@ const Search = () => {
           type="text"
           name="repoCount"
           placeholder="Enter Repo Count"
-          className="p-2 border border-blue-500 rounded-md w-[400px] placeholder-white text-white"
+          className="p-2 border border-blue-500 rounded-md w-[600px] placeholder-white text-white"
           onChange={handleChange}
           value={formData.repoCount}
         />
@@ -105,7 +105,10 @@ const Search = () => {
       {userData.length > 0 && (
         <div>
           {userData.map((user) => (
-            <div>
+            <div
+              key={user.id}
+              className="flex flex-col items-center gap-4 text-white p-8"
+            >
               <img src={user.avatar_url} alt={user.login} />
               <p>
                 <strong>Username:</strong> {user.login}
@@ -115,6 +118,7 @@ const Search = () => {
                   href={user.html_url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="text-blue-500 hover:underline"
                 >
                   View Profile
                 </a>
@@ -122,38 +126,10 @@ const Search = () => {
             </div>
           ))}
 
-          {hasMore && <button onClick={loadMore}>Load More</button>}
+          {hasMore && !loading && <button onClick={loadMore}>Load More</button>}
+          {loading && <p>Loading...</p>}
         </div>
       )}
-
-      {/* {loading && <p className="mt-4 text-white">Loading...</p>}
-
-      {error && <p className="text-red-500 mt-4">{error}</p>}
-
-      {userData && (
-        <div className="mt-8 text-white flex flex-col items-center gap-2">
-          <img
-            src={userData.avatar_url}
-            alt={userData.login}
-            className="w-20 h-20 rounded-full"
-          />
-          <p>
-            <strong>Username:</strong> {userData.login}
-          </p>
-          <p>
-            <strong>Name:</strong> {userData.name || "N/A"}
-          </p>
-          <p>
-            <strong>Bio:</strong> {userData.bio || "No bio available."}
-          </p>
-          <p>
-            <strong> Followers:</strong> {userData.followers}
-          </p>
-          <p>
-            <strong>Public Repos:</strong> {userData.public_repos}
-          </p>
-        </div>
-      )} */}
     </div>
   );
 };
