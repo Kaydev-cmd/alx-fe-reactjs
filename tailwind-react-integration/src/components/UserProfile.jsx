@@ -2,7 +2,7 @@ import React from "react";
 
 const UserProfile = () => {
   return (
-    <div className="user-profile bg-gray-100 sm:p-4 sm:max-w-xs mx-auto my-20 rounded-lg shadow-lg md:p-8 md:max-w-ms">
+    <div className="user-profile bg-gray-100 sm:p-4 sm:max-w-xs mx-auto my-20 rounded-lg shadow-lg md:p-8 md:max-w-sm">
       <img
         src="/assets/images/john_doe.jpeg"
         alt="User"
