@@ -1,7 +1,7 @@
+import UserProfile from "./components/UserProfile";
+
 function App() {
-  return (
-    <h1 className="font-bold">Welcome to React</h1>
-  );
+  return <UserProfile />;
 }
 
 export default App;
