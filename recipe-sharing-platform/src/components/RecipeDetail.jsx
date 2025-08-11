@@ -37,7 +37,10 @@ const RecipeDetail = () => {
   if (error) return <p>{error}</p>;
 
   return (
-    <div className="container flex flex-col gap-2">
+    <div
+      className="container flex flex-col gap-2 rounded-xl shadow-md bg-white"
+      style={{ padding: "22px" }}
+    >
       <h1 className="font-bold text-xl">{recipe.title}</h1>
       {recipe.image && (
         <img
