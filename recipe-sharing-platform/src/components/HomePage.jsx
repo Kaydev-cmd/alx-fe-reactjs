@@ -1,7 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
+  const navigate = useNavigate();
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
@@ -29,7 +31,11 @@ const HomePage = () => {
           <h2 className="font-semibold text-2xl">{recipe.title}</h2>
           <p>{recipe.summary}</p>
 
-          <button className="bg-blue-600" style={{ marginTop: "8px" }}>
+          <button
+            className="bg-blue-600"
+            style={{ marginTop: "8px" }}
+            onClick={() => navigate(`/recipe/${recipe.id}`)}
+          >
             See More
           </button>
         </div>
