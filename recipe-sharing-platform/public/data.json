@@ -3,24 +3,118 @@
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": "/assets/images/Spaghetti_Carbonara.jpg"
+    "image": "/assets/images/Spaghetti_Carbonara.jpg",
+    "ingredients": [
+      "200g spaghetti",
+      "100g pancetta or guanciale, diced",
+      "2 large eggs",
+      "50g Pecorino Romano cheese, grated",
+      "50g Parmesan cheese, grated",
+      "2 cloves garlic, peeled",
+      "Freshly ground black pepper",
+      "Salt",
+      "1 tbsp olive oil"
+    ],
+    "cooking_instructions": [
+      "Bring a large pot of salted water to a boil and cook spaghetti until al dente.",
+      "In a pan, heat olive oil over medium heat, add garlic and pancetta. Cook until pancetta is crispy, then remove garlic.",
+      "In a bowl, whisk eggs with grated Pecorino Romano and Parmesan cheese, and a generous amount of black pepper.",
+      "Drain the pasta, reserving some pasta water.",
+      "Add hot pasta to the pan with pancetta and remove from heat.",
+      "Quickly pour egg and cheese mixture over the pasta, tossing vigorously to create a creamy sauce. Add reserved pasta water if needed to loosen sauce.",
+      "Serve immediately with extra grated cheese and black pepper on top."
+    ]
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-    "image": "/assets/images/Chicken_Tikka_Masala.jpg"
+    "image": "/assets/images/Chicken_Tikka_Masala.jpg",
+    "ingredients": [
+      "500g boneless chicken thighs or breasts, cut into chunks",
+      "150g plain yogurt",
+      "2 tbsp lemon juice",
+      "2 tsp ground cumin",
+      "2 tsp ground coriander",
+      "1 tsp turmeric powder",
+      "1 tsp garam masala",
+      "1 tsp chili powder",
+      "2 tbsp vegetable oil",
+      "1 large onion, finely chopped",
+      "3 garlic cloves, minced",
+      "1 tbsp fresh ginger, grated",
+      "400g canned tomato puree",
+      "200ml heavy cream",
+      "1 tsp salt (adjust to taste)",
+      "Fresh coriander (cilantro) for garnish"
+    ],
+    "cooking_instructions": [
+      "In a bowl, combine yogurt, lemon juice, cumin, coriander, turmeric, garam masala, and chili powder. Add chicken chunks, coat well, and marinate for at least 1 hour (or overnight in fridge).",
+      "Heat oil in a large pan over medium heat. Add onions and sauté until golden brown.",
+      "Add garlic and ginger; cook for 1-2 minutes until fragrant.",
+      "Add marinated chicken and cook until sealed on all sides, about 5-7 minutes.",
+      "Pour in tomato puree, stir well, cover, and simmer for 15-20 minutes until chicken is cooked through.",
+      "Stir in heavy cream and salt; simmer uncovered for another 5 minutes until sauce thickens.",
+      "Garnish with fresh coriander and serve hot with rice or naan."
+    ]
   },
   {
     "id": 3,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": "/assets/images/Spaghetti_Carbonara.jpg"
+    "image": "/assets/images/Spaghetti_Carbonara.jpg",
+    "ingredients": [
+      "200g spaghetti",
+      "100g pancetta or guanciale, diced",
+      "2 large eggs",
+      "50g Pecorino Romano cheese, grated",
+      "50g Parmesan cheese, grated",
+      "2 cloves garlic, peeled",
+      "Freshly ground black pepper",
+      "Salt",
+      "1 tbsp olive oil"
+    ],
+    "cooking_instructions": [
+      "Bring a large pot of salted water to a boil and cook spaghetti until al dente.",
+      "In a pan, heat olive oil over medium heat, add garlic and pancetta. Cook until pancetta is crispy, then remove garlic.",
+      "In a bowl, whisk eggs with grated Pecorino Romano and Parmesan cheese, and a generous amount of black pepper.",
+      "Drain the pasta, reserving some pasta water.",
+      "Add hot pasta to the pan with pancetta and remove from heat.",
+      "Quickly pour egg and cheese mixture over the pasta, tossing vigorously to create a creamy sauce. Add reserved pasta water if needed to loosen sauce.",
+      "Serve immediately with extra grated cheese and black pepper on top."
+    ]
   },
   {
     "id": 4,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-    "image": "/assets/images/Chicken_Tikka_Masala.jpg"
+    "image": "/assets/images/Chicken_Tikka_Masala.jpg",
+    "ingredients": [
+      "500g boneless chicken thighs or breasts, cut into chunks",
+      "150g plain yogurt",
+      "2 tbsp lemon juice",
+      "2 tsp ground cumin",
+      "2 tsp ground coriander",
+      "1 tsp turmeric powder",
+      "1 tsp garam masala",
+      "1 tsp chili powder",
+      "2 tbsp vegetable oil",
+      "1 large onion, finely chopped",
+      "3 garlic cloves, minced",
+      "1 tbsp fresh ginger, grated",
+      "400g canned tomato puree",
+      "200ml heavy cream",
+      "1 tsp salt (adjust to taste)",
+      "Fresh coriander (cilantro) for garnish"
+    ],
+    "cooking_instructions": [
+      "In a bowl, combine yogurt, lemon juice, cumin, coriander, turmeric, garam masala, and chili powder. Add chicken chunks, coat well, and marinate for at least 1 hour (or overnight in fridge).",
+      "Heat oil in a large pan over medium heat. Add onions and sauté until golden brown.",
+      "Add garlic and ginger; cook for 1-2 minutes until fragrant.",
+      "Add marinated chicken and cook until sealed on all sides, about 5-7 minutes.",
+      "Pour in tomato puree, stir well, cover, and simmer for 15-20 minutes until chicken is cooked through.",
+      "Stir in heavy cream and salt; simmer uncovered for another 5 minutes until sauce thickens.",
+      "Garnish with fresh coriander and serve hot with rice or naan."
+    ]
   }
 ]
