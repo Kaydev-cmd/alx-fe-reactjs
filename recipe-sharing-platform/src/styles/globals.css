@@ -28,6 +28,22 @@ body {
   padding-right: 0.5rem;
 }
 
+input,
+form textarea {
+  background-color: #eaeaea;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  border: 1px solid #d0d0d0;
+  color: #333333;
+}
+
+input:focus,
+form textarea:focus {
+  border-color: #3b82f6;
+  outline: none;
+}
+
 button {
   padding: 12px 32px;
   cursor: pointer;
