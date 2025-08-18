@@ -50,6 +50,8 @@ const RegistrationForm = () => {
     });
   };
 
+  const { username, email, password } = formData;
+
   return (
     <form
       onSubmit={handleSubmit}
@@ -62,7 +64,7 @@ const RegistrationForm = () => {
           name="username"
           id="username"
           placeholder="Enter your username"
-          value={formData.username}
+          value={username}
           onChange={handleChange}
           className="py-4 px-2 border border-blue-500 rounded-lg"
           required
@@ -75,7 +77,7 @@ const RegistrationForm = () => {
           name="email"
           id="email"
           placeholder="Enter your email address"
-          value={formData.email}
+          value={email}
           onChange={handleChange}
           className="py-4 px-2 border border-blue-500 rounded-lg"
           required
@@ -88,7 +90,7 @@ const RegistrationForm = () => {
           name="password"
           id="password"
           placeholder="Enter your password"
-          value={formData.password}
+          value={password}
           onChange={handleChange}
           className="py-4 px-2 border border-blue-500 rounded-lg"
           required
